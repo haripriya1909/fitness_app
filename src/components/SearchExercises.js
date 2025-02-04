@@ -32,7 +32,7 @@ const SearchExercises = ({ setExercises, bodyPart, setBodyPart }) => {
   const handleSearch = debounce(async () => {
     if (search) {
       const exercisesData = await fetchData(
-        "https://exercisedb.p.rapidapi.com/exercises",
+        "exercisedb.p.rapidapi.com/exercises?limit=100",
         exerciseOptions
       );
 
